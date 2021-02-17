@@ -17,12 +17,11 @@ html {
 body {
   margin: 0 auto;
   padding: 0;
-  background-color: lightsteelblue;
+  background-color: white;
 }
 
 .box {
   margin: 0.5rem;
   padding: 0.5rem;
-  background-color: white;
   text-align: center;
 }
