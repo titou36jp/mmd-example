@@ -1,0 +1,32 @@
+/* 文字エンコーディング */
+@charset "UTF-8";
+
+/* スタイル定義 */
+html {
+  font-size: 100%; /* フォントサイズ指定 */
+  box-sizing: border-box; /* ボックスサイズはパディングとボーダーを幅と高さに含める */
+}
+
+/* 全ての要素に適用するスタイル定義 */
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* box-sizingは親要素の値を継承する */
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: white;
+}
+
+.box {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: white;
+  text-align: center;
+}
+
+.box video {
+  object-fit: cover;
+}
