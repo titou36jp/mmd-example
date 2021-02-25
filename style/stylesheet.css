@@ -3,8 +3,11 @@
 
 /* スタイル定義 */
 html {
+  font-family: "BIZ UDPゴシック", Arial, Helvetica, Courier New, Georgia,
+    Times New Roman, Trebuchet MS, Verdana;
   font-size: 100%; /* フォントサイズ指定 */
   box-sizing: border-box; /* ボックスサイズはパディングとボーダーを幅と高さに含める */
+  background-color: white;
 }
 
 /* 全ての要素に適用するスタイル定義 */
@@ -17,16 +20,37 @@ html {
 body {
   margin: 0 auto;
   padding: 0;
-  background-color: white;
+  background-color: transparent;
 }
 
 .box {
   margin: 0.5rem;
   padding: 0.5rem;
-  background-color: white;
   text-align: center;
 }
 
-.box video {
-  object-fit: cover;
+.cite-ul {
+  margin: 0 auto;
+  width: 30%;
+  list-style: none;
+  font-size: 0.7rem;
+  border: 0.05rem dashed red;
+}
+
+.cite-ul li {
+  margin: 0 0.1rem 0.2rem 0.1rem;
+  padding: 0.1rem;
+}
+
+a[title*="外部サイト"] {
+  background: url("../images/external-link-52.png") no-repeat 100% 98%;
+  background-size: 10px 10px;
+  padding-right: 16px;
+}
+
+.citebox {
+  margin: 0.1rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  text-align: center;
 }
