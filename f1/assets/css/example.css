@@ -1,6 +1,15 @@
+/* 文字エンコーディング */
+@charset "UTF-8";
+
+/* スタイル定義 */
+html {
+  font-family: "BIZ UDPゴシック", Arial, Helvetica, Courier New, Georgia,
+    Times New Roman, Trebuchet MS, Verdana;
+  font-size: 100%; /* フォントサイズ指定 */
+  box-sizing: border-box; /* ボックスサイズはパディングとボーダーを幅と高さに含める */
+}
+
 body {
-  font-family: "BIZ UDPゴシック", "Helvetica Neue Light", "HelveticaNeue-Light",
-    "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
   background: darkgrey;
 }
 
@@ -12,6 +21,37 @@ body {
   border-right: 1px solid #efefef;
   padding: 15px;
   background: white;
+}
+
+.box {
+  margin: 0 auto;
+}
+
+.h1-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+li {
+  margin: 3px 20px 3px 3px;
+  padding: 0.5px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+li > img {
+  width: 60px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 700px) {
+  .h1-box {
+    flex-wrap: wrap;
+  }
 }
 
 h2 {
