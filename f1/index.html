@@ -5,37 +5,44 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>F1 machine compare</title>
     <link rel="stylesheet" href="../style/normalize.css" type="text/css" />
-    <link rel="stylesheet" href="./assets/css/example.css" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="./assets/src/assets/css/images-compare.css"
-      type="text/css"
-    />
+    <link rel="stylesheet" href="./style/example.css" />
+    <link rel="stylesheet" href="./style/images-compare.css" />
   </head>
   <body>
     <div class="page-container">
       <div class="box">
         <ul class="h1-box">
-          <li><img src="./assets/img/equeko99-icon.jpg" /></li>
+          <li><img src="./icon/equeko99-icon.jpg" /></li>
           <li>F1兄弟仁義</li>
         </ul>
       </div>
 
       <!-- Test 1 -->
-      <div class="js-img-compare">
-        <div style="display: none">
-          <span class="images-compare-label">兄</span>
-          <img src="assets/img/01-celine-skowron-before.jpg" alt="Before" />
+      <div class="page-1">
+        <!-- 画像エリア -->
+        <div class="js-img-compare">
+          <div style="display: none">
+            <span class="images-compare-label">兄</span>
+            <img
+              src="./images/01-celine-skowron-before.jpg"
+              alt="べんつ（兄 ）"
+            />
+          </div>
+          <div>
+            <span class="images-compare-label">弟</span>
+            <img
+              src="./images/01-celine-skowron-after.jpg"
+              alt="あすとん（弟 ）"
+            />
+          </div>
         </div>
+
+        <!-- ボタンエリア -->
         <div>
-          <span class="images-compare-label">弟</span>
-          <img src="assets/img/01-celine-skowron-after.jpg" alt="After" />
+          <button class="btn js-front-btn">べんつ（兄 ）</button>
+          <button class="btn js-back-btn">あすとん（弟 ）</button>
+          <button class="btn js-toggle-btn">Toggle</button>
         </div>
-      </div>
-      <div>
-        <button class="btn js-front-btn">べんつ（兄 ）</button>
-        <button class="btn js-back-btn">あすとん（弟 ）</button>
-        <button class="btn js-toggle-btn">Toggle</button>
       </div>
 
       <footer>
@@ -53,52 +60,8 @@
     ></script>
     <script
       type="text/javascript"
-      src="./assets/src/assets/js/jquery.images-compare.js"
+      src="./script/jquery.images-compare.js"
     ></script>
-    <script type="text/javascript">
-      $(function () {
-        var imagesCompareElement = $(".js-img-compare").imagesCompare();
-        var imagesCompare = imagesCompareElement.data("imagesCompare");
-        var events = imagesCompare.events();
-
-        imagesCompare.on(events.changed, function (event) {
-          console.log(events.changed);
-          console.log(event.ratio);
-          if (event.ratio < 0.4) {
-            console.log("We see more than half of the back image");
-          }
-          if (event.ratio > 0.6) {
-            console.log("We see more than half of the front image");
-          }
-
-          if (event.ratio <= 0) {
-            console.log("We see completely back image");
-          }
-
-          if (event.ratio >= 1) {
-            console.log("We see completely front image");
-          }
-        });
-
-        $(".js-front-btn").on("click", function (event) {
-          event.preventDefault();
-          imagesCompare.setValue(1, true);
-        });
-
-        $(".js-back-btn").on("click", function (event) {
-          event.preventDefault();
-          imagesCompare.setValue(0, true);
-        });
-
-        $(".js-toggle-btn").on("click", function (event) {
-          event.preventDefault();
-          if (imagesCompare.getValue() >= 0 && imagesCompare.getValue() < 1) {
-            imagesCompare.setValue(1, true);
-          } else {
-            imagesCompare.setValue(0, true);
-          }
-        });
-      });
-    </script>
+    <script type="text/javascript" src="./script/script.js"></script>
   </body>
 </html>
