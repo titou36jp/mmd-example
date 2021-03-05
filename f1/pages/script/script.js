@@ -1,4 +1,4 @@
-$(function () {
+$(window).load(function () {
   var imagesCompareElement = $(".js-img-compare").imagesCompare();
   var imagesCompare = imagesCompareElement.data("imagesCompare");
   var events = imagesCompare.events();

@@ -5,7 +5,7 @@
 html {
   font-family: "BIZ UDPゴシック", Arial, Helvetica, Courier New, Georgia,
     Times New Roman, Trebuchet MS, Verdana;
-  font-size: 95%; /* フォントサイズ指定 */
+  font-size: 90%; /* フォントサイズ指定 */
   box-sizing: border-box; /* ボックスサイズはパディングとボーダーを幅と高さに含める */
 }
 
