@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Image compare</title>
+    <link rel="stylesheet" href="../../style/normalize.css" />
+    <link rel="stylesheet" href="./style/stylesheet.css" />
+    <link rel="stylesheet" href="./style/images-compare.css" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- Test 1 -->
+      <div class="js-img-compare">
+        <div style="display: none">
+          <span class="images-compare-label">兄</span>
+          <img src="../images/W12/01-before.jpg" alt="べんつ" />
+        </div>
+        <div>
+          <span class="images-compare-label">従弟</span>
+          <img src="../images/W12/MCL35M/02-after.jpg" alt="まくらーれん" />
+        </div>
+      </div>
+      <div>
+        <button class="btn js-front-btn">べんつ</button>
+        <button class="btn js-back-btn">まくらーれん</button>
+        <button class="btn js-toggle-btn">Rset</button>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="./script/jquery.images-compare.js"
+    ></script>
+    <script type="text/javascript" src="./script/script.js"></script>
+  </body>
+</html>

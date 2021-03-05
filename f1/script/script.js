@@ -1,43 +1,22 @@
 $(function () {
-  var imagesCompareElement = $(".js-img-compare").imagesCompare();
-  var imagesCompare = imagesCompareElement.data("imagesCompare");
-  var events = imagesCompare.events();
-
-  imagesCompare.on(events.changed, function (event) {
-    console.log(imagesCompare.getValue());
-    console.log(events.changed);
-    console.log(event.ratio);
-    if (event.ratio < 0.4) {
-      console.log("We see more than half of the back image");
-    }
-    if (event.ratio > 0.6) {
-      console.log("We see more than half of the front image");
-    }
-
-    if (event.ratio <= 0) {
-      console.log("We see completely back image");
-    }
-
-    if (event.ratio >= 1) {
-      console.log("We see completely front image");
-    }
+  //1ページ
+  $(".page-1-btn").click(function () {
+    document
+      .getElementById("iframeId")
+      .contentWindow.location.replace("./pages/page-1.html");
   });
 
-  $(".js-front-btn").on("click", function (event) {
-    event.preventDefault();
-    imagesCompare.setValue(1, true);
+  //2ページ
+  $(".page-2-btn").click(function () {
+    document
+      .getElementById("iframeId")
+      .contentWindow.location.replace("./pages/page-2.html");
   });
 
-  $(".js-back-btn").on("click", function (event) {
-    event.preventDefault();
-    imagesCompare.setValue(0, true);
-  });
-
-  $(".js-toggle-btn").on("click", function (event) {
-    if (imagesCompare.getValue() >= 0 && imagesCompare.getValue() < 1) {
-      imagesCompare.setValue(1, true);
-    } else {
-      imagesCompare.setValue(0, true);
-    }
+  //3ページ
+  $(".page-3-btn").click(function () {
+    document
+      .getElementById("iframeId")
+      .contentWindow.location.replace("./pages/page-3.html");
   });
 });
