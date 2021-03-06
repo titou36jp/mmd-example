@@ -3,16 +3,18 @@
 
 /* スタイル定義 */
 html {
-  font-family: "BIZ UDPゴシック", Arial, Helvetica, Courier New, Georgia,
+  font-family: "BIZ UDPGothic", Arial, Helvetica, Courier New, Georgia,
     Times New Roman, Trebuchet MS, Verdana;
   font-size: 90%; /* フォントサイズ指定 */
   box-sizing: border-box; /* ボックスサイズはパディングとボーダーを幅と高さに含める */
 }
 
+/* ボディスタイル定義 */
 body {
-  background: darkgrey;
+  background: lightgray;
 }
 
+/* ページコンテナ */
 .page-container {
   max-width: 1024px;
   margin: 0 auto;
@@ -23,13 +25,14 @@ body {
   background: white;
 }
 
-/* caption */
-.caption {
+/* ページキャプション */
+.page-caption {
   margin: 0 auto;
   padding: 0;
 }
 
-.caption-box {
+/* ページキャプションboxモデル */
+.page-caption-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,14 +43,19 @@ body {
   vertical-align: middle;
 }
 
-.caption-box > li {
+/* ページキャプション内 li */
+.page-caption-box > li {
   margin: 1px 20px 1px 1px;
   padding: 0.5px;
-  font-size: 2rem;
+  font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", Arial, Helvetica,
+    Courier New, Georgia, Times New Roman, Trebuchet MS, Verdana;
+  font-size: 0.9rem;
   font-weight: bold;
+  letter-spacing: 2px;
 }
 
-.caption-box > li > img {
+/* ページキャプション内 img */
+.page-caption-box > li > img {
   width: 60px;
   object-fit: cover;
 }
@@ -58,6 +66,7 @@ body {
   padding: 0;
 }
 
+/* ページボタンboxモデル */
 .page-button-box {
   display: flex;
   justify-content: center;
@@ -69,9 +78,10 @@ body {
   vertical-align: middle;
 }
 
+/* ページボタン内 li */
 .page-button-box > li {
-  margin: 10px 20px 5px 1px;
-  padding: 2px;
+  margin: 10px 20px 0 20px;
+  padding: 3px;
   width: 110px;
 
   border: 0.05rem solid rgb(252, 252, 252);
@@ -95,6 +105,7 @@ body {
   text-shadow: 1px 1px 1.5px rgba(32, 32, 32, 0.9);
 }
 
+/* ページボタン内 liホバー */
 .page-button-box > li:hover {
   color: #fff;
   background-color: #5cabd0;
@@ -103,21 +114,58 @@ body {
 
 /* メディアクエリ */
 @media screen and (max-width: 700px) {
-  .caption-box,
+  .page-caption-box,
   .page-button-box {
     flex-wrap: wrap;
   }
 }
 
-.page-area {
+/* 各ページエリア */
+.pages-area {
   margin: 0 auto;
   padding: 0;
 }
 
-footer {
-  padding: 30px 15px 15px 15px;
+/* リンクのスタイル定義 */
+a {
+  outline: none;
+  text-decoration: none;
 }
 
-a {
-  color: cornflowerblue;
+/* 未訪問リンクのスタイル定義 */
+a:link {
+  color: #265301;
+}
+
+/* 訪問済リンクのスタイル定義 */
+a:visited {
+  color: #437a16;
+}
+
+/* フォーカスしたリンクのスタイル定義 */
+a:focus {
+  border-bottom: 1px solid;
+  background: #bae498;
+}
+
+/* ホバーしたリンクのスタイル定義 */
+a:hover {
+  border-bottom: 1px solid;
+  background: #cdfeaa;
+}
+
+/* ユーザーの操作で要素がアクティブになった際のリンクのスタイル定義 */
+a:active {
+  background: #265301;
+  color: #cdfeaa;
+}
+
+/* フッター */
+footer {
+  padding: 10px;
+  font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", Arial, Helvetica,
+    Courier New, Georgia, Times New Roman, Trebuchet MS, Verdana;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }

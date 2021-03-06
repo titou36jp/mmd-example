@@ -94,15 +94,15 @@
   top: 10px;
   left: 10px;
   z-index: 1;
-  color: rgb(0, 0, 0);
-  color: rgba(0, 0, 0, 0.4);
+  color: rgb(77, 19, 77);
+  color: rgba(77, 19, 77, 0.4);
   background: rgb(255, 255, 255);
   background: rgba(255, 255, 255, 0.7);
   padding: 10px;
   border-radius: 5px;
   pointer-events: none;
   display: none;
-  border: 0.1px solid black;
+  border: 0.1px solid #401040 ;
 }
 
 .images-compare-container .images-compare-label {
