@@ -84,7 +84,6 @@ body {
   padding: 3px;
   width: 110px;
 
-  border: 0.05rem solid rgb(252, 252, 252);
   border-radius: 0.4rem;
   background-color: red;
   color: white;
@@ -100,7 +99,7 @@ body {
   );
 
   /* 水平方向:1px 垂直方向:1px ぼかしの距離:3px 影の形状を全方向に拡大:2px  inset:内側の影に変更*/
-  box-shadow: 0.9px 0.9px 4px 2px rgba(222, 222, 222, 0.9) inset;
+  box-shadow: 1px 1px 3px 1px rgba(222, 222, 222, 0.9) inset;
   /* 水平方向:2px 垂直方向:2px ぼかし効果の境界までの距離:2px 色*/
   text-shadow: 1px 1px 1.5px rgba(32, 32, 32, 0.9);
 }
