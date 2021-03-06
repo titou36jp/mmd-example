@@ -34,7 +34,7 @@ button.btn {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   background: none;
-  color: cornflowerblue;
+  color: rgb(3, 20, 51);
   /* cursor: default; */
   font: inherit;
   line-height: normal;
@@ -47,6 +47,26 @@ button.btn {
   border: 1px solid cornflowerblue;
   cursor: pointer;
   margin-top: 10px;
+
+  /* ボタンの角を丸める */
+  border-radius: 0.4rem;
+  /* ボタンのフォントサイズ */
+  font-size: 0.9rem;
+  
+  /* グラデーションの向き(左から右) */
+  /* 色:rgb(255, 188, 0) 透明度(0):透明   位置:  0%(左端) から */
+  /* 色:rgb(255, 128, 0) 透明度(1):不透明 位置:100%(右端) まで */
+  background-image: linear-gradient(
+    to right,
+    rgba(228, 236, 250, 0) 0%,
+    rgba(171, 196, 243, 0.6) 20%,
+    rgba(73, 136, 252, 0.9) 100%
+  );
+
+  /* 水平方向:1px 垂直方向:1px ぼかしの距離:3px 影の形状を全方向に拡大:2px  inset:内側の影に変更*/
+  box-shadow: 1px 1px 3px 1px rgba(222, 222, 222, 0.9) inset;
+  /* 水平方向:1px 垂直方向:1px ぼかし効果の境界までの距離:1px 色*/
+  text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.9);
 }
 
 button.btn:hover {
