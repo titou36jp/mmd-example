@@ -2,7 +2,7 @@
 .images-compare-container {
   display: inline-block;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* Images compare front element */
@@ -13,7 +13,7 @@
   left: 0;
   z-index: 2;
   pointer-events: none;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* Images compare back element */
