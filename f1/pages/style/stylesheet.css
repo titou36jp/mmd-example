@@ -18,10 +18,10 @@ body {
 .page-container {
   max-width: 1024px;
   margin: 0 auto;
+  padding: 10px;
   text-align: center;
   border-left: 1px solid #efefef;
   border-right: 1px solid #efefef;
-  padding: 15px;
   background: white;
 }
 
@@ -30,6 +30,8 @@ body {
 }
 
 button.btn {
+  margin-top: 6px;
+  padding: 10px;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -43,10 +45,8 @@ button.btn {
   -webkit-user-select: none; /* for button */
   -moz-user-select: none;
   -ms-user-select: none;
-  padding: 10px;
   border: 1px solid cornflowerblue;
   cursor: pointer;
-  margin-top: 10px;
 
   /* ボタンの角を丸める */
   border-radius: 0.4rem;
