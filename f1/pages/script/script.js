@@ -47,15 +47,13 @@ $(window).load(function () {
 });
 
 $(document).ready(function () {
-  function init() {
-    $("#page-container").imagesCompare({
-      initVisibleRatio: 0.5,
-      interactionMode: "drag",
-      addSeparator: true,
-      addDragHandle: true,
-      animationDuration: 600,
-      animationEasing: "swing",
-      precision: 6,
-    });
-  }
+  $("#page-container").imagesCompare({
+    initVisibleRatio: 0.5,
+    interactionMode: "drag",
+    addSeparator: true,
+    addDragHandle: true,
+    animationDuration: 600,
+    animationEasing: "swing",
+    precision: 6,
+  });
 });
