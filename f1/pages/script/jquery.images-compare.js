@@ -197,8 +197,10 @@
 
       frontElement.addClass("images-compare-before");
       frontElement.css("display", "block");
+      frontElement.css("object-fit", "cover");
       backElement.addClass("images-compare-after");
       backElement.css("display", "block");
+      backElement.css("object-fit", "cover");
 
       if (options.addDragHandle) {
         buildDragHandle();
