@@ -17,7 +17,7 @@ body {
 
 /* コンテナのスタイル定義 */
 .container {
-  margin: 0.5rem auto;
+  margin: 0.2rem auto;
   padding: 0.2rem;
   max-width: 80%;
   text-align: center;
@@ -171,7 +171,7 @@ footer {
   padding: 0.3rem;
   font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", Arial, Helvetica,
     Courier New, Georgia, Times New Roman, Trebuchet MS, Verdana;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: bold;
 }
 
