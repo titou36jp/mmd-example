@@ -3,9 +3,10 @@
 
 /* ルート要素のスタイル定義 */
 html {
+  /* フォント指定 */
   font-family: "BIZ UDPGothic", Arial, Helvetica, Courier New, Georgia,
     Times New Roman, Trebuchet MS, Verdana;
-  font-size: 90%; /* フォントサイズ指定 */
+  font-size: 18px; /* フォントサイズ指定 */
   box-sizing: border-box; /* ボックスサイズはパディングとボーダーを幅と高さに含める */
 }
 
@@ -74,4 +75,11 @@ button.btn:hover {
 button.btn::-moz-focus-inner {
   border: 0;
   padding: 0;
+}
+
+/* メディアクエリ */
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 90%; /* フォントサイズ指定 */
+  }
 }
