@@ -1,7 +1,7 @@
 /* 文字エンコーディング */
 @charset "UTF-8";
 
-/* htmlのスタイル定義 */
+/* ルート要素のスタイル定義 */
 html {
   font-family: "BIZ UDPGothic", Arial, Helvetica, Courier New, Georgia,
     Times New Roman, Trebuchet MS, Verdana;
@@ -9,28 +9,28 @@ html {
   box-sizing: border-box; /* ボックスサイズはパディングとボーダーを幅と高さに含める */
 }
 
-/* bodyのスタイル定義 */
+/* body要素のスタイル定義 */
 body {
   background: lightgray;
 }
 
-/* ページコンテナのスタイル定義 */
-.page-container {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 3px;
+/* コンテナのスタイル定義 */
+.container {
+  margin: 0.5rem auto;
+  padding: 0.2rem;
+  max-width: 80%;
   text-align: center;
   background-color: white;
 }
 
-/* ページキャプションのスタイル定義 */
-.page-caption {
+/* キャプションbox */
+.caption-box {
   margin: 0 auto;
   padding: 0;
 }
 
-/* ページキャプションboxモデル */
-.page-caption-box {
+/* キャプションのスタイル定義 */
+.caption {
   margin: 0;
   padding: 0;
   display: flex;
@@ -41,31 +41,31 @@ body {
   vertical-align: middle;
 }
 
-/* ページキャプション内 liのスタイル定義 */
-.page-caption-box > li {
-  margin: 1px 20px 1px 1px;
-  padding: 0.5px;
+/* キャプション内 liのスタイル定義 */
+.caption > li {
+  margin: 0.1rem 1.2rem 0.1rem 0.1rem;
+  padding: 0.2rem;
   font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", Arial, Helvetica,
     Courier New, Georgia, Times New Roman, Trebuchet MS, Verdana;
   font-size: 0.9rem;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 0.1rem;
 }
 
-/* ページキャプション内 imgのスタイル定義 */
-.page-caption-box > li img {
-  width: 60px;
+/* キャプション内 imgのスタイル定義 */
+.caption > li img {
+  width: 3rem;
   object-fit: cover;
 }
 
-/* ページボタンのスタイル定義 */
-.page-button {
+/* iframeコンテンツ切替ボタンbox */
+.iframe-contents-change-button-box {
   margin: 0 auto;
   padding: 0;
 }
 
-/* ページボタンboxモデル */
-.page-button-box {
+/* iframeコンテンツ切替ボタンのスタイル定義 */
+.iframe-contents-change-button {
   margin: 0;
   padding: 0;
   display: flex;
@@ -76,15 +76,16 @@ body {
   vertical-align: middle;
 }
 
-/* ページボタン内 liのスタイル定義 */
-.page-button-box > li {
-  margin: 10px 20px 0 20px;
-  padding: 3px;
-  width: 110px;
+/* iframeコンテンツ切替ボタン内 liのスタイル定義 */
+.iframe-contents-change-button > li {
+  margin: 0.5rem 1rem 0 1rem;
+  padding: 0.2rem;
+  width: 5rem;
 
   border-radius: 0.4rem;
   background-color: red;
   color: white;
+  font-size: 0.9rem;
   font-weight: bold;
 
   /* グラデーションの向き(左から右) */
@@ -102,8 +103,8 @@ body {
   text-shadow: 1px 1px 1.5px rgba(32, 32, 32, 0.9);
 }
 
-/* ページボタン内 liのスタイル定義 */
-.page-button-box > li:hover {
+/* iframeコンテンツ切替ボタン内 liのスタイル定義 */
+.iframe-contents-change-button > li:hover {
   color: #fff;
   background-color: #5cabd0;
   cursor: pointer;
@@ -111,24 +112,24 @@ body {
 
 /* メディアクエリ */
 @media screen and (max-width: 700px) {
-  .page-caption-box,
-  .page-button-box {
+  .caption,
+  .iframe-contents-change-button {
     flex-wrap: wrap;
   }
 }
 
-/* 各ページエリアのスタイル定義 */
-.pages-area {
+/* iframeコンテンツのスタイル定義 */
+.iframe-contents {
   margin: 0 auto;
   padding: 0;
 }
 
-/* iframe のスタイル定義 */
+/* iframe要素のスタイル定義 */
 iframe {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 650px;
+  height: 35rem;
   border: none;
 }
 
@@ -174,10 +175,9 @@ a:not(a[href="https://ameblo.jp/equeko99"]):active
 /* フッター */
 footer {
   margin: 0;
-  padding: 3px;
+  padding: 0.3rem;
   font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", Arial, Helvetica,
     Courier New, Georgia, Times New Roman, Trebuchet MS, Verdana;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-weight: bold;
-  letter-spacing: 1px;
 }

@@ -1,7 +1,7 @@
 /* 文字エンコーディング */
 @charset "UTF-8";
 
-/* スタイル定義 */
+/* ルート要素のスタイル定義 */
 html {
   font-family: "BIZ UDPGothic", Arial, Helvetica, Courier New, Georgia,
     Times New Roman, Trebuchet MS, Verdana;
@@ -9,25 +9,24 @@ html {
   box-sizing: border-box; /* ボックスサイズはパディングとボーダーを幅と高さに含める */
 }
 
+/* body要素のスタイル定義 */
 body {
   margin: 0;
   padding: 0;
   background-color: transparent;
 }
 
+/* page-containerクラス */
 .page-container {
-  max-width: 1024px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0.5rem;
   text-align: center;
-  border-left: 1px solid #efefef;
-  border-right: 1px solid #efefef;
-  background: white;
 }
 
+/* ボタン要素スタイル */
 button.btn {
-  margin-top: 6px;
-  padding: 10px;
+  margin-top: 0.4rem;
+  padding: 0.4rem;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -48,7 +47,7 @@ button.btn {
   border-radius: 0.4rem;
   /* ボタンのフォントサイズ */
   font-size: 0.9rem;
-  
+
   /* グラデーションの向き(左から右) */
   /* 色:rgb(255, 188, 0) 透明度(0):透明   位置:  0%(左端) から */
   /* 色:rgb(255, 128, 0) 透明度(1):不透明 位置:100%(右端) まで */
@@ -65,11 +64,13 @@ button.btn {
   text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.9);
 }
 
+/* ボタンホバースタイル */
 button.btn:hover {
   background: cornflowerblue;
   color: white;
 }
 
+/* Firefox だけ button 要素に CSS で消せないパディング対応 */
 button.btn::-moz-focus-inner {
   border: 0;
   padding: 0;
