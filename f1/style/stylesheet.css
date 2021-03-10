@@ -102,7 +102,7 @@ body {
   box-shadow: 1px 1px 3px 1px rgba(222, 222, 222, 0.9) inset;
   /* フォントカラー*/
   color: white;
-  /* 水平方向:2px 垂直方向:2px ぼかし効果の境界までの距離:1px 色*/
+  /* 水平方向:1px 垂直方向:1px ぼかし効果の境界までの距離:1px 色*/
   text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.9);
 }
 
