@@ -77,7 +77,7 @@ body {
 
 /* iframeコンテンツ切替ボタン内 liのスタイル定義 */
 .iframe-contents-change-button > li {
-  margin: 0.5rem 1rem 0 1rem;
+  margin: 0.5rem 0.5rem 0 0.5rem;
   padding: 0.3rem;
   width: 8rem;
 
@@ -86,7 +86,7 @@ body {
 
   /* フォント指定 */
   font-family: "BIZ UDP明朝 Medium", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
 
   /* グラデーションの向き(左から右) */
