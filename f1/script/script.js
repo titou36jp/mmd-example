@@ -1,36 +1,20 @@
 /**
- * iframeコンテンツ切替
- *
- * @param {string}} loc ロケーション
- */
-function changeLocation(loc) {
-  document.getElementById("iframeId").contentWindow.location.replace(loc);
-}
-
-/**
  * iframe切替ボタンのスタイルをリセットする
  */
 function resetStyle() {
-  //1ページのiframe切替ボタンスタイル（フォントカラー、ぼかし効果）をリセット
-  $(".iframe-contents-change-button > li:nth-child(1)").css("color", "white");
-  $(".iframe-contents-change-button > li:nth-child(1)").css(
-    "text-shadow",
-    "1px 1px 1px rgba(10, 10, 10, 0.9)"
-  );
-
-  //2ページのiframe切替ボタンスタイル（フォントカラー、ぼかし効果）をリセット
-  $(".iframe-contents-change-button > li:nth-child(2)").css("color", "white");
-  $(".iframe-contents-change-button > li:nth-child(2)").css(
-    "text-shadow",
-    "1px 1px 1.5px rgba(10, 10, 10, 0.9)"
-  );
-
-  //3ページのiframe切替ボタンスタイル（フォントカラー、ぼかし効果）をリセット
-  $(".iframe-contents-change-button > li:nth-child(3)").css("color", "white");
-  $(".iframe-contents-change-button > li:nth-child(3)").css(
-    "text-shadow",
-    "1px 1px 1px rgba(10, 10, 10, 0.9)"
-  );
+  //iframe切替ボタンスタイル（フォントカラー、ぼかし効果）をリセット
+  for (var i = 1; i < 5; i++) {
+    //フォントカラー変更
+    $(".iframe-contents-change-button > li:nth-child(" + i + ")").css(
+      "color",
+      "white"
+    );
+    //ぼかし効果変更
+    $(".iframe-contents-change-button > li:nth-child(" + i + ")").css(
+      "text-shadow",
+      "1px 1px 1px rgba(10, 10, 10, 0.9)"
+    );
+  }
 }
 
 /**
@@ -52,15 +36,27 @@ function setStyle(elnum) {
 }
 
 /**
+ * iframeコンテンツ切替
+ *
+ * @param {string}} loc ロケーション
+ */
+function changeLocation(loc) {
+  document.getElementById("iframeId").contentWindow.location.replace(loc);
+}
+
+/**
  * メイン処理
  *
  * @param {string}} loc ロケーション
  * @param {number}} elnum li兄弟要素のグループの要素番号
  */
 function mainProc(loc, elnum) {
-  changeLocation(loc);
+  //iframe切替ボタンのスタイルをリセットする
   resetStyle();
+  //iframe切替ボタンのスタイルをセットする
   setStyle(elnum);
+  //iframeコンテンツ切替
+  changeLocation(loc);
 }
 
 /**
@@ -83,6 +79,12 @@ $(function () {
   $(".iframe-contents-change-button > li:nth-child(3)").click(function () {
     //メイン処理
     mainProc("./pages/page-3.html", 3);
+  });
+
+  //4ページ目をクリック
+  $(".iframe-contents-change-button > li:nth-child(4)").click(function () {
+    //メイン処理
+    mainProc("./pages/page-4.html", 4);
   });
 });
 
