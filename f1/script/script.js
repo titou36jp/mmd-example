@@ -3,7 +3,7 @@
  */
 function resetStyle() {
   //iframe切替ボタンスタイル（フォントカラー、ぼかし効果）をリセット
-  for (var i = 1; i < 6; i++) {
+  for (var i = 1; i < 8; i++) {
     //フォントカラー変更
     $(".iframe-contents-change-button > li:nth-child(" + i + ")").css(
       "color",
@@ -91,6 +91,18 @@ $(function () {
   $(".iframe-contents-change-button > li:nth-child(5)").click(function () {
     //メイン処理
     mainProc("./pages/page-5.html", 5);
+  });
+
+  //6ページ目をクリック
+  $(".iframe-contents-change-button > li:nth-child(6)").click(function () {
+    //メイン処理
+    mainProc("./pages/page-6.html", 6);
+  });
+
+  //7ページ目をクリック
+  $(".iframe-contents-change-button > li:nth-child(7)").click(function () {
+    //メイン処理
+    mainProc("./pages/page-7.html", 7);
   });
 });
 

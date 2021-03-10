@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../style/normalize.css" />
+    <link rel="stylesheet" href="./style/stylesheet.css" />
+    <link rel="stylesheet" href="./style/images-compare.css" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./script/jquery.images-compare.js"
+    ></script>
+    <title></title>
+  </head>
+
+  <body oncontextmenu="return false;">
+    <div class="page-container">
+      <!-- images-compare-container -->
+      <div class="js-img-compare">
+        <!-- images-compare-before(frontElement) -->
+        <div style="display: none">
+          <span class="images-compare-label">組長</span>
+          <img src="./images/SF21/base/SF21.jpg" alt="SF21" />
+        </div>
+
+        <!-- images-compare-after(backElement) -->
+        <div>
+          <span class="images-compare-label">舎弟</span>
+          <img src="./images/SF21/extend/C41.jpg" alt="C41" />
+        </div>
+      </div>
+
+      <!-- ボタンエリア -->
+      <div>
+        <button class="btn js-front-btn">SF21</button>
+        <button class="btn js-back-btn">C41</button>
+        <button class="btn js-toggle-btn">Reset</button>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./script/script.js"></script>
+  </body>
+</html>
