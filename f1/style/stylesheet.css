@@ -4,8 +4,7 @@
 /* ルート要素のスタイル定義 */
 html {
   /* フォント指定 */
-  font-family: "BIZ UDPGothic", Arial, Helvetica, Courier New, Georgia,
-    Times New Roman, Trebuchet MS, Verdana;
+  font-family: "BIZ UDPGothic", sans-serif;
   font-size: 18px; /* フォントサイズ指定 */
   box-sizing: border-box; /* ボックスサイズはパディングとボーダーを幅と高さに含める */
 }
@@ -46,9 +45,8 @@ body {
 .caption > li {
   margin: 0.1rem 1.2rem 0.1rem 0.1rem;
   padding: 0.2rem;
-  font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", Arial, Helvetica,
-    Courier New, Georgia, Times New Roman, Trebuchet MS, Verdana;
-  font-size: 0.9rem;
+  font-family: "ヒラギノ明朝 ProN W3", sans-serif;
+  font-size: 0.8rem;
   font-weight: bold;
   letter-spacing: 0.1rem;
 }
@@ -80,13 +78,16 @@ body {
 /* iframeコンテンツ切替ボタン内 liのスタイル定義 */
 .iframe-contents-change-button > li {
   margin: 0.5rem 1rem 0 1rem;
-  padding: 0.2rem;
-  width: 5rem;
+  padding: 0.3rem;
+  width: 8rem;
 
   border-radius: 0.4rem;
   background-color: red;
   color: white;
-  font-size: 0.9rem;
+
+  /* フォント指定 */
+  font-family: "BIZ UDP明朝 Medium", sans-serif;
+  font-size: 0.8rem;
   font-weight: bold;
 
   /* グラデーションの向き(左から右) */
@@ -169,8 +170,9 @@ a:not(a[href="https://ameblo.jp/equeko99"]):active
 footer {
   margin: 0;
   padding: 0.3rem;
-  font-family: "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", Arial, Helvetica,
-    Courier New, Georgia, Times New Roman, Trebuchet MS, Verdana;
+
+  /* フォント指定 */
+  font-family: "ヒラギノ明朝 ProN W3", sans-serif;
   font-size: 0.7rem;
   font-weight: bold;
 }
@@ -178,7 +180,7 @@ footer {
 /* メディアクエリ */
 @media screen and (max-width: 700px) {
   html {
-    font-size: 90%; /* フォントサイズ指定 */
+    font-size: 0.8rem; /* フォントサイズ指定 */
   }
 
   .caption,

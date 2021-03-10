@@ -4,8 +4,7 @@
 /* ルート要素のスタイル定義 */
 html {
   /* フォント指定 */
-  font-family: "BIZ UDPGothic", Arial, Helvetica, Courier New, Georgia,
-    Times New Roman, Trebuchet MS, Verdana;
+  font-family: "BIZ UDPGothic", sans-serif;
   font-size: 18px; /* フォントサイズ指定 */
   box-sizing: border-box; /* ボックスサイズはパディングとボーダーを幅と高さに含める */
 }
@@ -26,15 +25,25 @@ body {
 
 /* ボタン要素スタイル */
 button.btn {
-  margin-top: 0.4rem;
+  margin: 0.4rem 0.4rem 0 0.4rem;
   padding: 0.4rem;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   background: none;
   color: rgb(3, 20, 51);
+
+
+  /* フォント指定 */
+  font-family: "BIZ UDPGothic", sans-serif;
+  /* ボタンの角を丸める */
+  border-radius: 0.4rem;
+  /* ボタンのフォントサイズ */
+  font-size: 0.8rem;
+  /* font-weight: bold; */
   /* cursor: default; */
-  font: inherit;
+  /* font: inherit; */
+
   line-height: normal;
   overflow: visible;
   -webkit-appearance: button; /* for input */
@@ -43,11 +52,6 @@ button.btn {
   -ms-user-select: none;
   border: 1px solid cornflowerblue;
   cursor: pointer;
-
-  /* ボタンの角を丸める */
-  border-radius: 0.4rem;
-  /* ボタンのフォントサイズ */
-  font-size: 0.9rem;
 
   /* グラデーションの向き(左から右) */
   /* 色:rgb(255, 188, 0) 透明度(0):透明   位置:  0%(左端) から */
@@ -80,6 +84,6 @@ button.btn::-moz-focus-inner {
 /* メディアクエリ */
 @media screen and (max-width: 700px) {
   html {
-    font-size: 90%; /* フォントサイズ指定 */
+    font-size: 0.8rem; /* フォントサイズ指定 */
   }
 }

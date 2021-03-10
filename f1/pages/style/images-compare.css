@@ -87,7 +87,12 @@
 
 /* Label */
 .images-compare-label {
-  font-family: sans-serif;
+  /* フォント指定 */
+  /* font-family: sans-serif; */
+  font-family: "BIZ UDP明朝 Medium", sans-serif;
+  /* フォントサイズ */
+  font-size: 0.8rem;
+
   text-transform: uppercase;
   font-weight: bold;
   position: absolute;
