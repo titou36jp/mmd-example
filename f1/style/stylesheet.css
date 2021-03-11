@@ -77,11 +77,11 @@ body {
 
 /* iframeコンテンツ切替ボタン内 liのスタイル定義 */
 .iframe-contents-change-button > li {
-  margin: 0.5rem 0.3rem 0 0.3rem;
-  padding: 0.1rem;
+  margin: 0.5rem 0.2rem 0 0.2rem;
+  padding: 0.2rem;
   width: 8rem;
 
-  border-radius: 0.4rem;
+  border-radius: 0.3rem;
   background-color: red;
 
   /* フォント指定 */
@@ -179,7 +179,7 @@ footer {
 }
 
 /* メディアクエリ */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   html {
     font-size: 0.8rem; /* フォントサイズ指定 */
   }
