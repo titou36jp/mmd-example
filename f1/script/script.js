@@ -83,13 +83,13 @@ function setStyle(elnum) {
   //ボックス：ぼかし効果変更
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
     "box-shadow",
-    "0.5px 0.5px 2px 2px rgba(203, 205, 206, 0.9) inset"
+    "0.5px 0.5px 2px 2px rgba(232, 232, 232, 0.9) inset"
   );
 
   //テキスト：ぼかし効果変更
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
     "text-shadow",
-    "1.5px 1.5px 2px rgba(255, 255, 255, 0.9)"
+    "1px 1px 1.5px rgba(255, 255, 255, 0.9)"
   );
 
   //背景
