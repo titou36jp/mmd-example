@@ -1,0 +1,72 @@
+/* 文字エンコーディング */
+@charset "UTF-8";
+
+/* スタイル定義 */
+html {
+  font-family: sans-serif;
+  font-size: 100%;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.box {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: white;
+  text-align: center;
+}
+
+p {
+  margin: 0.1rem;
+  padding: 0.3rem;
+
+  /* 前景色 */
+  color: white;
+  /* 背景色 */
+  background-color: red;
+
+  /* ボーダー 色*/
+  /* border: 0.1rem solid black; */
+  /* ボーダー丸め */
+  border-radius: 0.5rem;
+
+  /* ボックス：水平方向:0.5px 垂直方向:0.5px ぼかしの距離:4px 影の形状を全方向に拡大:4px inset:内側の影に変更*/
+  box-shadow: 0.5px 0.5px 4px 4px rgba(255, 200, 200, 0.9) inset;
+
+  /* テキスト：水平方向:1.5px 垂直方向:1.5px ぼかし効果の境界までの距離:2px 色*/
+  text-shadow: 1.5px 1.5px 2px rgba(32, 32, 32, 0.9);
+
+  /* 背景 */
+  /* グラデーションの向き(左から右) */
+  /* 色:rgba(255, 128, 128) 透明度(0.6):透明   位置:  5%(左端) から */
+  /* 色:rgba(255, 0, 0)     透明度(1  ):不透明 位置:90%(右端) まで */
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 128, 128, 0.6) 5%,
+    rgba(255, 0, 0, 1) 90%
+  );
+}
+
+p:hover {
+  /* ボーダー 色*/
+  border: 0.1rem solid blueviolet;
+
+  /* 背景色 */
+  background-color: rgb(33, 107, 130);
+
+  /* ボーダー：水平方向:0.5px 垂直方向:0.5px ぼかしの距離:4px 影の形状を全方向に拡大:4px inset:内側の影に変更*/
+  box-shadow: 0.5px 0.5px 4px 4px rgba(203, 205, 206, 0.9) inset;
+
+  /* 背景 */
+  /* グラデーションの向き(左から右) */
+  /* 色:rgba(203, 205, 206) 透明度(0.6):透明   位置:  5%(左端) から */
+  /* 色:rgba( 33, 107, 130) 透明度(1  ):不透明 位置:90%(右端) まで */
+  background-image: linear-gradient(
+    to right,
+    rgba(203, 205, 206, 0.6) 5%,
+    rgb(33, 107, 130) 90%
+  );
+}
