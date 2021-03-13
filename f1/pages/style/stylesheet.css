@@ -23,15 +23,25 @@ body {
   text-align: center;
 }
 
+/* 引用元エリア */
+.source-area {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 0.6rem;
+}
+
 /* ボタン要素スタイル */
 button.btn {
-  margin: 0.4rem 0.4rem 0 0.4rem;
+  margin: 0 0.4rem 0 0.4rem;
   padding: 0.5rem;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   background: none;
-
 
   /* フォント指定 */
   font-family: "BIZ UDPGothic", sans-serif;

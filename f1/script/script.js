@@ -1,4 +1,4 @@
-// クリックされたli兄弟要素のグループの要素番号
+// 前回クリックされたli兄弟要素のグループの要素番号
 var prevIndex;
 
 /**
@@ -147,7 +147,7 @@ $(function () {
   $(".iframe-contents-change-button > li").click(function () {
     //iframe切替ボタンのスタイルをリセットする
     resetStyle(prevIndex);
-    //要素番号取得
+    //前回クリックされたli兄弟要素のグループの要素番号取得
     prevIndex = $(".iframe-contents-change-button > li").index(this) + 1;
     //メイン処理
     mainProc("./pages/page-" + prevIndex + ".html", prevIndex);
