@@ -118,7 +118,8 @@ body {
   cursor: pointer;
 }
 
-.aaa {
+/* iframeコンテンツ切替ボタン内 liホーバー時のスタイル定義（バックアップ） */
+.bak {
   /* カーソル */
   cursor: pointer;
 
@@ -134,7 +135,7 @@ body {
   background-color: rgb(73, 136, 252);
 
   /* ボックス：水平方向:0.5px 垂直方向:0.5px ぼかしの距離:2px 影の形状を全方向に拡大:2px inset:内側の影に変更*/
-  box-shadow: 0.5px 0.5px 2px 2px rgba(203, 205, 206, 0.9) inset;
+  box-shadow: 0.5px 0.5px 2px 2px rgba(238, 240, 241, 0.9) inset;
 
   /* テキスト：水平方向:1.5px 垂直方向:1.5px ぼかし効果の境界までの距離:2px 色*/
   text-shadow: 1.5px 1.5px 2px rgba(255, 255, 255, 0.9);
@@ -145,7 +146,7 @@ body {
   /* 色:rgba( 33, 107, 130) 透明度(1  ):不透明 位置:90%(右端) まで */
   background-image: linear-gradient(
     to right,
-    rgba(203, 205, 206, 0.6) 5%,
+    rgba(238, 240, 241, 0.6) 5%,
     rgb(73, 136, 252, 0.9) 90%
   );
 }

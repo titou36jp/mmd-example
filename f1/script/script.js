@@ -83,7 +83,7 @@ function setStyle(elnum) {
   //ボックス：ぼかし効果変更
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
     "box-shadow",
-    "0.5px 0.5px 2px 2px rgba(232, 232, 232, 0.9) inset"
+    "0.5px 0.5px 2px 2px rgba(238, 240, 241, 0.9) inset"
   );
 
   //テキスト：ぼかし効果変更
@@ -95,7 +95,7 @@ function setStyle(elnum) {
   //背景
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
     "background-image",
-    "linear-gradient(to right, rgba(203, 205, 206, 0.6) 5%, rgba(100, 149, 237, 1) 90%"
+    "linear-gradient(to right, rgba(238, 240, 241, 0.6) 5%, rgba(100, 149, 237, 1) 90%"
   );
 }
 
