@@ -160,15 +160,22 @@ $(function () {
  * @author: equeko99
  */
 $(window).load(function () {
+  //iframe切替ボタンのスタイルをセットする
+  setStyle(prevIndex);
+  //iframeコンテンツ切替
+  changeLocation("./pages/page-" + prevIndex + ".html");
+});
+
+/**
+ * HTML（DOM）の読み込みが終わったタイミングで実行
+ *
+ * @author: equeko99
+ */
+$(document).ready(function () {
   //iframe切替ボタンの要素数取得
   var length = $(".iframe-contents-change-button > li").length + 1;
   for (var elnum = 1; elnum < length; elnum++) {
     //iframe切替ボタンのスタイルをリセットする
     resetStyle(elnum);
   }
-
-  //iframe切替ボタンのスタイルをセットする
-  setStyle(prevIndex);
-  //iframeコンテンツ切替
-  changeLocation("./pages/page-" + prevIndex + ".html");
 });
