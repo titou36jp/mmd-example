@@ -161,8 +161,8 @@ $(function () {
  */
 $(window).load(function () {
   //iframe切替ボタンの要素数取得
-  var length = $(".iframe-contents-change-button > li").length;
-  for (var elnum = 1; elnum < length + 1; elnum++) {
+  var length = $(".iframe-contents-change-button > li").length + 1;
+  for (var elnum = 1; elnum < length; elnum++) {
     //iframe切替ボタンのスタイルをリセットする
     resetStyle(elnum);
   }
