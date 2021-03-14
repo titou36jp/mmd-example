@@ -1,5 +1,5 @@
 // 前回クリックされたli兄弟要素のグループの要素番号
-var prevIndex;
+var prevIndex = 1;
 
 /**
  * iframe切替ボタンのスタイルをリセットする
@@ -9,44 +9,44 @@ var prevIndex;
 function resetStyle(elnum) {
   //パディング
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    "padding",
-    "0.2rem"
+    styles.default_style.padding[0],
+    styles.default_style.padding[1]
   );
 
   //ボーダー
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    "border",
-    "none"
+    styles.default_style.border[0],
+    styles.default_style.border[1]
   );
 
   //前景色
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    "color",
-    "white"
+    styles.default_style.color[0],
+    styles.default_style.color[1]
   );
 
   //背景色
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    "background-color",
-    "red"
+    styles.default_style.background_color[0],
+    styles.default_style.background_color[1]
   );
 
   //ボックス：ぼかし効果変更
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    "box-shadow",
-    "0.5px 0.5px 2px 2px rgba(255, 200, 200, 0.9) inset)"
+    styles.default_style.box_shadow[0],
+    styles.default_style.box_shadow[1]
   );
 
   //テキスト：ぼかし効果変更
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    "text-shadow",
-    "1.5px 1.5px 2px rgba(32, 32, 32, 0.9)"
+    styles.default_style.text_shadow[0],
+    styles.default_style.text_shadow[1]
   );
 
-  //背景
+  //背景グラデーションの向き(左から右)
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    "background-image",
-    "linear-gradient(to right, rgba(255, 128, 128, 0.6) 5%, rgba(255, 0, 0, 1) 90%"
+    styles.default_style.background_image[0],
+    styles.default_style.background_image[1]
   );
 }
 
@@ -58,44 +58,44 @@ function resetStyle(elnum) {
 function setStyle(elnum) {
   //パディング
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    "padding",
-    "0"
+    styles.hover_style.padding[0],
+    styles.hover_style.padding[1]
   );
 
   //ボーダー
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    "border",
-    "0.2rem solid black"
+    styles.hover_style.border[0],
+    styles.hover_style.border[1]
   );
 
   //前景色
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    "color",
-    "black"
+    styles.hover_style.color[0],
+    styles.hover_style.color[1]
   );
 
   //背景色
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    "background-color",
-    "cornflowerblue"
+    styles.hover_style.background_color[0],
+    styles.hover_style.background_color[1]
   );
 
   //ボックス：ぼかし効果変更
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    "box-shadow",
-    "0.5px 0.5px 2px 2px rgba(238, 240, 241, 0.9) inset"
+    styles.hover_style.box_shadow[0],
+    styles.hover_style.box_shadow[1]
   );
 
   //テキスト：ぼかし効果変更
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    "text-shadow",
-    "1px 1px 1.5px rgba(255, 255, 255, 0.9)"
+    styles.hover_style.text_shadow[0],
+    styles.hover_style.text_shadow[1]
   );
 
-  //背景
+  //背景グラデーションの向き(左から右)
   $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    "background-image",
-    "linear-gradient(to right, rgba(238, 240, 241, 0.6) 5%, rgba(100, 149, 237, 1) 90%"
+    styles.hover_style.background_image[0],
+    styles.hover_style.background_image[1]
   );
 }
 
@@ -160,8 +160,15 @@ $(function () {
  * @author: equeko99
  */
 $(window).load(function () {
-  //メイン処理
-  mainProc("./pages/page-1.html", 1);
-  // クリックされたli兄弟要素のグループの要素番号
-  prevIndex = 1;
+  //iframe切替ボタンの要素数取得
+  var length = $(".iframe-contents-change-button > li").length;
+  for (var elnum = 1; elnum < length + 1; elnum++) {
+    //iframe切替ボタンのスタイルをリセットする
+    resetStyle(elnum);
+  }
+
+  //iframe切替ボタンのスタイルをセットする
+  setStyle(prevIndex);
+  //iframeコンテンツ切替
+  changeLocation("./pages/page-" + prevIndex + ".html");
 });
