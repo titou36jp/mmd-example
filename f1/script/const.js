@@ -1,6 +1,23 @@
 // iframeコンテンツ切替ボタン内 liのスタイル定義
 var styles = {
   // iframeコンテンツ切替ボタン内 liのデフォルトスタイル定義
+  init_style: {
+    //パディング
+    padding: ["padding", ""],
+    //ボーダー
+    border: ["border", ""],
+    //前景色
+    color: ["color", ""],
+    //背景色
+    background_color: ["background-color", ""],
+    //ボックス：ぼかし効果変更
+    box_shadow: ["box-shadow", ""],
+    //テキスト：ぼかし効果変更
+    text_shadow: ["text-shadow", ""],
+    //背景グラデーションの向き(左から右)
+    background_image: ["background-image", ""],
+  },
+  // iframeコンテンツ切替ボタン内 liのデフォルトスタイル定義
   default_style: {
     //パディング
     padding: ["padding", "0.2rem"],
