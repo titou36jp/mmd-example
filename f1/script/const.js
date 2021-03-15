@@ -1,5 +1,5 @@
 // iframeコンテンツ切替ボタン内 liのスタイル定義
-var styles = {
+var btn_styles = {
   // iframeコンテンツ切替ボタン内 liのスタイル初期化
   init_style: {
     //パディング
@@ -62,5 +62,19 @@ var styles = {
       "background-image",
       "linear-gradient(to right, rgba(238, 240, 241, 0.6) 5%, rgba(100, 149, 237, 1) 90%",
     ],
+  },
+};
+
+// iframeコンテンツ切替ボタン内 liのカーソルスタイル定義
+var cursor_styles = {
+  //デフォルト(自動選択)
+  auto_style: {
+    //カーソル
+    cursor: ["cursor", "auto"],
+  },
+  //待ち時間
+  wait_style: {
+    //カーソル
+    cursor: ["cursor", "wait"],
   },
 };
