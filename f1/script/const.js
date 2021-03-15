@@ -1,6 +1,6 @@
 // iframeコンテンツ切替ボタン内 liのスタイル定義
 var styles = {
-  // iframeコンテンツ切替ボタン内 liのデフォルトスタイル定義
+  // iframeコンテンツ切替ボタン内 liのスタイル初期化
   init_style: {
     //パディング
     padding: ["padding", ""],
@@ -40,7 +40,7 @@ var styles = {
       "linear-gradient(to right, rgba(255, 128, 128, 0.6) 5%, rgba(255, 0, 0, 1) 90%",
     ],
   },
-  // iframeコンテンツ切替ボタン内 liのマウスホーバー時スタイル定義
+  // iframeコンテンツ切替ボタン内 liのマウスホバー時スタイル定義
   hover_style: {
     //パディング
     padding: ["padding", "0"],
