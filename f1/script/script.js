@@ -58,7 +58,8 @@ function setStyle(elnum, styleObj) {
  */
 function setCursorStyle(styleObj) {
   //カーソルスタイルをセット
-  $("*").css(styleObj.cursor[0], styleObj.cursor[1]);
+  var cssText = styleObj.cursor[0];
+  $("body").css({ cssText });
 }
 
 /**
