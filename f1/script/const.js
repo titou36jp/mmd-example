@@ -70,11 +70,11 @@ var cursor_styles = {
   //デフォルト(自動選択)
   auto_style: {
     //カーソル
-    cursor: ["cursor", "auto"],
+    cursor: ["cursor", "auto !important"],
   },
   //待ち時間
   wait_style: {
     //カーソル
-    cursor: ["cursor", "wait"],
+    cursor: ["cursor", "wait !important"],
   },
 };

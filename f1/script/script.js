@@ -57,8 +57,8 @@ function setStyle(elnum, styleObj) {
  * @param {object}} styleObj cssのプロパティと値を有したオブジェクト
  */
 function setCursorStyle(styleObj) {
-  //背景グラデーションの向き(左から右)
-  $("body").css(styleObj.cursor[0], styleObj.cursor[1]);
+  //カーソルスタイルをセット
+  $("*").css(styleObj.cursor[0], styleObj.cursor[1]);
 }
 
 /**
