@@ -163,17 +163,17 @@ $(function () {
   });
 });
 
-/**
- * 画像など含めすべてのコンテンツの読み込みが終わるタイミングで実行
- *
- * @author: equeko99
- */
-$(window).load(function () {
-  //iframeコンテンツ切替ボタン内 liホーバー時のスタイルをセットする
-  setStyleWrapper(prevIndex, styles.hover_style);
-  //iframeコンテンツ切替
-  changeLocation("./pages/page-" + prevIndex + ".html");
-});
+// /**
+//  * 画像など含めすべてのコンテンツの読み込みが終わるタイミングで実行
+//  *
+//  * @author: equeko99
+//  */
+// $(window).load(function () {
+//   //iframeコンテンツ切替ボタン内 liホーバー時のスタイルをセットする
+//   setStyleWrapper(prevIndex, styles.hover_style);
+//   //iframeコンテンツ切替
+//   changeLocation("./pages/page-" + prevIndex + ".html");
+// });
 
 /**
  * HTML（DOM）の読み込みが終わったタイミングで実行
@@ -183,8 +183,15 @@ $(window).load(function () {
 $(document).ready(function () {
   //iframe切替ボタンの要素数取得
   var length = $(".iframe-contents-change-button > li").length + 1;
+
+  //iframeコンテンツ切替ボタン内 全liのスタイルをデフォルトに設定する
   for (var elnum = 1; elnum < length; elnum++) {
     //iframeコンテンツ切替ボタン内 liのスタイルをセットする
     setStyleWrapper(elnum, styles.default_style);
   }
+
+  //iframeコンテンツ切替ボタン内 liホーバー時のスタイルをセットする
+  setStyleWrapper(prevIndex, styles.hover_style);
+  //iframeコンテンツ切替
+  changeLocation("./pages/page-" + prevIndex + ".html");
 });
