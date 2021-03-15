@@ -123,19 +123,6 @@ function changeLocation(loc) {
 }
 
 /**
- * メイン処理
- *
- * @param {string}} loc ロケーション
- * @param {number}} elnum li兄弟要素のグループの要素番号
- */
-function mainProc(loc, elnum) {
-  //iframeコンテンツ切替ボタン内 liホーバー時のスタイルをセットする
-  setStyleWrapper(elnum, styles.hover_style);
-  //iframeコンテンツ切替
-  changeLocation(loc);
-}
-
-/**
  * iframe切替ボタン処理
  */
 $(function () {
@@ -161,10 +148,18 @@ $(function () {
   $(".iframe-contents-change-button > li").click(function () {
     //iframeコンテンツ切替ボタン内 liのスタイルをセットする
     setStyleWrapper(prevIndex, styles.default_style);
-    //前回クリックされたli兄弟要素のグループの要素番号取得
-    prevIndex = $(".iframe-contents-change-button > li").index(this) + 1;
-    //メイン処理
-    mainProc("./pages/page-" + prevIndex + ".html", prevIndex);
+
+    //クリックされたli兄弟要素のグループの要素番号取得
+    var index = $(".iframe-contents-change-button > li").index(this) + 1;
+    if (prevIndex != index) {
+      //前回クリックされたli兄弟要素のグループの要素番号設定
+      prevIndex = index;
+      //iframeコンテンツ切替
+      changeLocation("./pages/page-" + prevIndex + ".html");
+    }
+
+    //iframeコンテンツ切替ボタン内 liホーバー時のスタイルをセットする
+    setStyleWrapper(prevIndex, styles.hover_style);
   });
 });
 
