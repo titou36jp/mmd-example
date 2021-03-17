@@ -1,0 +1,53 @@
+/* 文字エンコーディング */
+@charset "UTF-8";
+
+/* ルート要素のスタイル定義 */
+html {
+  /* フォント指定 */
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-size: 18px; /* フォントサイズ指定 */
+  box-sizing: border-box; /* ボックスサイズはパディングとボーダーを幅と高さに含める */
+}
+
+/* body要素のスタイル定義 */
+body {
+  background: lightgray;
+}
+
+/* p要素のスタイル定義 */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* boxクラスのスタイル定義 */
+.box {
+  margin: 0.5rem auto;
+  padding: 0.2rem;
+  max-width: 85%;
+  background: white;
+  border: 0.05rem solid black;
+  border-radius: 0.3rem;
+
+  /* 相対位置指定 */
+  position: relative;
+}
+
+/* boxクラスのスタイル定義 */
+.box_text {
+  margin: 0.1rem;
+  padding: 0.1rem;
+
+  /* 絶対位置指定 */
+  /* position: absolute; */
+
+  /* 相対位置指定 */
+  /* position: relative; */
+
+  /* 要素を二次元平面上の水平方向で再配置 */
+  /* transform: translateX(3rem); */
+  /* flex-shrink: 0;
+F  top: 0;
+  left: 2rem;
+  white-space: nowrap; */
+}

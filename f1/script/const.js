@@ -1,3 +1,23 @@
+// iframeコンテンツ切替ボタン内用オブジェクトのプロパティ名配列
+var obj_prop_name = [
+  //パディング
+  "padding",
+  //ボーダー
+  "border",
+  //前景色
+  "color",
+  //背景色
+  "background_color",
+  //ボックスぼかし効果
+  "box_shadow",
+  //テキストぼかし効果
+  "text_shadow",
+  //背景グラデーション
+  "background_image",
+  //アニメーションが完了するまでの所要時間
+  "transition",
+];
+
 // iframeコンテンツ切替ボタン内 liのスタイル定義
 var btn_styles = {
   // iframeコンテンツ切替ボタン内 liのスタイル初期化
@@ -16,6 +36,8 @@ var btn_styles = {
     text_shadow: ["text-shadow", ""],
     //背景グラデーションの向き(左から右)
     background_image: ["background-image", ""],
+    //アニメーションが完了するまでの所要時間
+    transition: ["transition", ""],
   },
   // iframeコンテンツ切替ボタン内 liのデフォルトスタイル定義
   default_style: {
@@ -39,6 +61,8 @@ var btn_styles = {
       "background-image",
       "linear-gradient(to right, rgba(255, 128, 128, 0.6) 5%, rgba(255, 0, 0, 1) 90%",
     ],
+    //アニメーションが完了するまでの所要時間
+    transition: ["transition", ""],
   },
   // iframeコンテンツ切替ボタン内 liのマウスホバー時スタイル定義
   hover_style: {
@@ -62,6 +86,8 @@ var btn_styles = {
       "background-image",
       "linear-gradient(to right, rgba(238, 240, 241, 0.6) 5%, rgba(100, 149, 237, 1) 90%",
     ],
+    //アニメーションが完了するまでの所要時間
+    transition: ["transition", "background-color 2s"],
   },
 };
 

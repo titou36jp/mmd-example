@@ -8,47 +8,26 @@ var prevIndex = 1;
  * @param {object}} styleObj cssのプロパティと値を有したオブジェクト
  */
 function setStyle(elnum, styleObj) {
-  //パディング
-  $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    styleObj.padding[0],
-    styleObj.padding[1]
-  );
+  //プロパティ名配列のサイズ取得
+  var len = obj_prop_name.length;
 
-  //ボーダー
-  $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    styleObj.border[0],
-    styleObj.border[1]
-  );
+  //繰返し処理
+  for (var index = 0; index < len; index++) {
+    //プロパティ名取得
+    var objPropName = obj_prop_name[index];
+    //プロパティ名に紐付くcssプロパティ名取得
+    var cssProp = styleObj[objPropName][0];
+    //プロパティ名に紐付くcssプロパティ値取得
+    var cssPropVal = styleObj[objPropName][1];
+    //css変更
+    $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
+      cssProp,
+      cssPropVal
+    );
 
-  //前景色
-  $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    styleObj.color[0],
-    styleObj.color[1]
-  );
-
-  //背景色
-  $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    styleObj.background_color[0],
-    styleObj.background_color[1]
-  );
-
-  //ボックス：ぼかし効果変更
-  $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    styleObj.box_shadow[0],
-    styleObj.box_shadow[1]
-  );
-
-  //テキスト：ぼかし効果変更
-  $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    styleObj.text_shadow[0],
-    styleObj.text_shadow[1]
-  );
-
-  //背景グラデーションの向き(左から右)
-  $(".iframe-contents-change-button > li:nth-child(" + elnum + ")").css(
-    styleObj.background_image[0],
-    styleObj.background_image[1]
-  );
+    // debug
+    // console.log(cssProp + ":" + cssPropVal);
+  }
 }
 
 /**

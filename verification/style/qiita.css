@@ -1,0 +1,315 @@
+/* 文字エンコーディング */
+@charset "UTF-8";
+
+/* ルート要素のスタイル定義 */
+html {
+  /* フォント指定 */
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-size: 18px; /* フォントサイズ指定 */
+  box-sizing: border-box; /* ボックスサイズはパディングとボーダーを幅と高さに含める */
+}
+
+/* body要素のスタイル定義 */
+body {
+  counter-reset: section;
+}
+
+/* p要素のスタイル定義 */
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* samplelistクラスのスタイル定義 */
+.samplelist {
+  display: flex;
+
+  /* Flexコンテナにおいて積み重なるように配置する */
+  flex-direction: column;
+  /* アイテムを先頭にまとめる */
+  align-items: start;
+}
+
+/* samplelist__itemクラスのスタイル定義 */
+.samplelist__item {
+  margin: 15px 0 0 0;
+  display: block;
+
+  /* 相対位置指定 */
+  position: relative;
+}
+
+/* samplelist__itemクラスが指定される要素の最初の子要素として擬似要素を作成 */
+.samplelist__item::before {
+  /* 絶対位置指定 */
+  position: absolute;
+  top: 0;
+  /* 親要素から-30px */
+  left: -30px;
+
+  /* inline-flexの要素同士を横並び */
+  display: inline-flex;
+  width: 25px;
+  height: 25px;
+  background-color: #888;
+  color: #fff;
+
+  /* アイテムを中央付近にまとめる */
+  align-items: center;
+  /* アイテムを中央に寄せる */
+  justify-content: center;
+  /* 単位のない値: この値を要素のフォントサイズに掛けたものを使用する */
+  line-height: 1;
+
+  /* 指定された値によって CSS カウンターの値を増加又は減少させるためのプロパティ */
+  counter-increment: section;
+  /* CSS カウンター */
+  content: counter(section);
+  /* ブロック内のテキストの行の前に置く空白 (字下げ) の幅を設定 */
+  text-indent: 0;
+}
+
+/* samplelist__descクラスのスタイル定義 */
+.samplelist__desc {
+  font-family: monospace;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/* 01. 完全理解してない（ベース部分） */
+/* boxクラスのスタイル定義 */
+.box {
+  position: relative;
+  font-size: 16px;
+  width: 140px;
+  height: 62px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+/* box__textクラスのスタイル定義（CSS完全に理解した） */
+.box__text {
+  margin: 10px;
+}
+
+/* 02. margin-left + margin-rightにネガティブ */
+.box--sample02 .box__text {
+  margin-left: 60px;
+  margin-right: -60px;
+  border: 1px dashed black;
+}
+
+/* 03. padding-left + margin-rightにネガティブ */
+.box--sample03 .box__text {
+  padding-left: 50px;
+  margin-right: -60px;
+  border: 1px dashed black;
+}
+
+/* 04. margin-left + white-space */
+.box--sample04 .box__text {
+  margin-left: 60px;
+  /* ホワイトスペースを詰めますが、行の折り返しは行いません */
+  white-space: nowrap;
+  border: 1px dashed black;
+}
+
+/* 05. padding-left + white-space */
+.box--sample05 .box__text {
+  padding-left: 50px;
+  /* ホワイトスペースを詰めますが、行の折り返しは行いません */
+  white-space: nowrap;
+  border: 1px dashed black;
+}
+
+/* 06. margin-left + width */
+.box--sample06 .box__text {
+  margin-left: 60px;
+  width: 150px;
+  border: 1px dashed black;
+}
+
+/* 07. padding-left + width */
+.box--sample07 .box__text {
+  padding-left: 50px;
+  width: 150px;
+  border: 1px dashed black;
+}
+
+/* 08. position:absolute + left + width */
+.box--sample08 .box__text {
+  /* 絶対位置指定 */
+  position: absolute;
+  right: -50px;
+  width: 120px;
+  border: 1px dashed black;
+}
+
+/* 09. position:relative + left */
+.box--sample09 .box__text {
+  /* 相対位置指定 */
+  position: relative;
+  left: 50px;
+  border: 1px dashed black;
+}
+
+/* 10. position:absolute + right */
+.box--sample10 .box__text {
+  /* 絶対位置指定 */
+  position: absolute;
+  right: -42px;
+  border: 1px dashed black;
+}
+
+/* 11. transformのtranslateX */
+.box--sample11 .box__text {
+  /* 要素を二次元平面上の水平方向で再配置 */
+  transform: translateX(50px);
+  border: 1px dashed black;
+}
+
+/* 12. transformのmatrix */
+.box--sample12 .box__text {
+  /* 二次元同次変換行列を定義（6個の数値で2D変形を指定） */
+  /* 1番目の数値は、水平方向の縮尺（a） */
+  /* 2番目の数値は、垂直方向の傾斜率（b） */
+  /* 3番目の数値は、水平方向の傾斜率（c） */
+  /* 4番目の数値は、垂直方向の縮尺（d） */
+  /* 5番目の数値は、水平方向の移動距離（e） */
+  /* 6番目の数値は、垂直方向の移動距離（f） */
+  transform: matrix(1, 0, 0, 1, 50, 0);
+  border: 1px dashed black;
+}
+
+/* 13. transformでY軸回転→Z軸移動→Y軸回転 */
+/* rotateY():要素の形を変化させずに縦座標 (垂直軸) の周りを回転させる変形を定義 */
+/* rotateY():Y軸を軸とする角度によって時計回りの回転を指定*/
+/* translateZ():方向の距離で移動を指定。 translateZ()関数にはパーセンテージ値を指定することができない */
+/* 要素または要素がどれだけ内側または外側に移動するかを指定 */
+.box--sample13 .box__text {
+  transform: rotateY(90deg) translateZ(50px) rotateY(-90deg);
+  border: 1px dashed black;
+}
+
+/* 14. transformでZ軸回転→Y軸移動→Z軸回転 */
+.box--sample14 .box__text {
+  /* rotateZ():要素の形を変化させずに Z 軸の周りを回転させる変形を定義 */
+  /* rotateZ():Z軸を軸とする角度によって時計回りの回転を指定 */
+  /* translateY():Y方向の距離で移動を指定 */
+  transform: rotateZ(90deg) translateY(-50px) rotateZ(-90deg);
+  border: 1px dashed black;
+}
+
+/* 15. flex-shrinkによる幅の強制 */
+.box--sample15 {
+  display: flex;
+}
+.box--sample15 .box__text {
+  padding-left: 50px;
+
+  /* フレックスアイテムの縮小係数を設定 */
+  flex-shrink: 0;
+  border: 1px dashed black;
+}
+
+/* 16. ボックスの偽装 */
+.box--sample16 {
+  /* 指定された要素の幅をブラウザーが計算して決めます */
+  width: auto;
+}
+.box--sample16 .box__text {
+  /* 相対位置指定 */
+  position: relative;
+
+  margin-left: 60px;
+  /* z順を定義。より大きな z-index を持つ要素はより小さな要素の上に重なります */
+  z-index: 3;
+  border: 1px dashed black;
+}
+/* box--sample16クラスが指定される要素の最初の子要素として擬似要素を作成 */
+.box--sample16::before {
+  content: "";
+  /* 相対位置指定 */
+  position: absolute;
+  top: -1px;
+  left: -1px;
+
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 140px;
+  height: 62px;
+  z-index: 2;
+  border: 1px dashed red;
+}
+/* box--sample16クラスが指定される要素の最後の子要素として擬似要素を作成 */
+.box--sample16::after {
+  content: "";
+  /* 相対位置指定 */
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  background-color: #fff;
+  width: 221px;
+  height: 64px;
+  z-index: 1;
+  border: 1px dashed blue;
+}
+
+/* 17. text-indentの二重指定 */
+.box--sample17 {
+  /* ブロック内のテキストの行の前に置く空白 (字下げ) の幅を設定 */
+  text-indent: 50px;
+}
+.box--sample17 .box__text {
+  /* ブロック内のテキストの行の前に置く空白 (字下げ) の幅を設定 */
+  text-indent: 0;
+
+  display: inline-block;
+  border: 1px dashed black;
+}
+
+/* 18. text-shadowによる偽文字 */
+.box--sample18 .box__text {
+  color: transparent;
+
+  /* 1番目の値:水平方向の影のオフセット距離を表します。*/
+  /*正の値を指定すると右へ、負の値を指定すると左へ影が移動します。 */
+
+  /* 2番目の値:垂直方向の影のオフセット距離を表します。*/
+  /* 正の値を指定すると下へ、負の値を指定すると上へ影が移動します。 */
+
+  /* 3番目の値:省略可能ですが、指定した場合には影のぼかし半径を表します。 */
+  /* ぼかし半径が指定されない場合はゼロとなります。 */
+  /* 尚、ぼかし半径とは、ぼかし効果の境界までの距離のことですが */
+  /* ぼかし効果を計算する厳密なアルゴリズムは定義されていません。 */
+  text-shadow: 50px 0 0 #000;
+
+  border: 1px dashed black;
+}
+
+/* 19. transformのscaleで幅を突破する */
+.box--sample19 .box__text {
+  font-size: 8px;
+  padding-left: 25px;
+
+  /* 要素の変形における原点を設定 */
+  transform-origin: 0 0;
+  /* 1より大きい値で要素を拡大 */
+  transform: scale(2);
+
+  border: 1px dashed black;
+}
+
+/* 20. transformのrotateYで2回反転 */
+.box--sample20 {
+  /* rotateY():Y軸を軸とする角度によって時計回りの回転を指定*/
+  transform: rotateY(180deg);
+}
+.box--sample20 .box__text {
+  /* 要素の変形における原点を設定（x-offset | y-offset） */
+  transform-origin: 35px 0;
+  /* rotateY():Y軸を軸とする角度によって時計回りの回転を指定*/
+  transform: rotateY(180deg);
+
+  border: 1px dashed black;
+}
