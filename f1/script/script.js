@@ -67,7 +67,7 @@ function changeLocation(loc) {
  * iframe切替ボタン処理
  */
 $(function () {
-  //マウスホバーしたときのスタイルを指定
+  //マウスホバー時のスタイル指定
   $(".iframe-contents-change-button > li").on("mouseover", function () {
     //要素番号取得
     var elnum = $(".iframe-contents-change-button > li").index(this) + 1;
@@ -75,7 +75,7 @@ $(function () {
     setStyleWrapper(elnum, btn_styles.hover_style);
   });
 
-  //マウスアウトしたときに元のスタイルに戻る
+  //マウスアウト時のデフォルトスタイル指定
   $(".iframe-contents-change-button > li").on("mouseout", function () {
     //要素番号取得
     var elnum = $(".iframe-contents-change-button > li").index(this) + 1;
