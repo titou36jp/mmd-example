@@ -18,7 +18,7 @@ body {
 .container {
   margin: 0.1rem auto;
   padding: 0.1rem;
-  max-width: 85%;
+  max-width: 87%;
   text-align: center;
   background-color: white;
 }
@@ -43,7 +43,7 @@ body {
 
 /* キャプション内 liのスタイル定義 */
 .caption > li {
-  margin: 0.1rem 1.2rem 0.1rem 0.1rem;
+  margin: 0.05rem 1.2rem 0.05rem 0;
   padding: 0.2rem;
   font-family: "ヒラギノ明朝 ProN W3", sans-serif;
   font-size: 0.8rem;
