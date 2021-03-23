@@ -1,3 +1,6 @@
+// 前回クリックされたli兄弟要素のグループの要素番号
+var prevIndex = 1;
+
 // iframeコンテンツ切替ボタン内用オブジェクトのプロパティ名配列
 var obj_prop_name = [
   //パディング
@@ -96,11 +99,11 @@ var cursor_styles = {
   //デフォルト(自動選択)
   auto_style: {
     //カーソル
-    cursor: ["cursor: auto !important;"],
+    cursor: ["cursor", "auto"],
   },
   //待ち時間
   wait_style: {
     //カーソル
-    cursor: ["cursor: wait !important;"],
+    cursor: ["cursor", "wait"],
   },
 };

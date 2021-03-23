@@ -1,6 +1,3 @@
-// 前回クリックされたli兄弟要素のグループの要素番号
-var prevIndex = 1;
-
 /**
  * iframeコンテンツ切替ボタン内 liのスタイルをセットする
  *
@@ -31,14 +28,15 @@ function setStyle(elnum, styleObj) {
 }
 
 /**
- * iframeコンテンツ切替ボタン内 liのカーソルスタイルをセットする
+ * iframeコンテンツのカーソルスタイルをセットする
  *
- * @param {object}} styleObj cssのプロパティと値を有したオブジェクト
+ * @param {object}} cursorStyles cssのプロパティと値を有したオブジェクト
  */
-function setCursorStyle(styleObj) {
+function setCursorStyle(cursorStyles) {
   //カーソルスタイルをセット
-  var cssText = styleObj.cursor[0];
-  $("body").css({ cssText });
+  var csstext =
+    "{" + cursorStyles.cursor[0] + ":" + cursorStyles.cursor[1] + "}";
+  $("iframe-contents").css(csstext);
 }
 
 /**
@@ -87,11 +85,10 @@ $(function () {
 
   //クリックイベント処理
   $(".iframe-contents-change-button > li").click(function () {
-    //iframeコンテンツ切替ボタン内 liのカーソルスタイルを待ち時間にする
-    setCursorStyle(cursor_styles.wait_style);
-
     //iframeコンテンツ切替ボタン内 liのデフォルトスタイルをセットする
     setStyleWrapper(prevIndex, btn_styles.default_style);
+    //iframeコンテンツ切替ボタン内 liのカーソルスタイルを待ち時間にする
+    setCursorStyle(cursor_styles.wait_style);
 
     //クリックされたli兄弟要素のグループの要素番号取得
     var index = $(".iframe-contents-change-button > li").index(this) + 1;
@@ -102,13 +99,26 @@ $(function () {
       changeLocation("./pages/page-" + prevIndex + ".html");
     }
 
-    //iframeコンテンツ切替ボタン内 liマウスホバー時のスタイルをセットする
-    setStyleWrapper(prevIndex, btn_styles.hover_style);
-
     //iframeコンテンツ切替ボタン内 liのカーソルスタイルをデフォルト(自動選択)にする
     setCursorStyle(cursor_styles.auto_style);
+    //iframeコンテンツ切替ボタン内 liマウスホバー時のスタイルをセットする
+    setStyleWrapper(prevIndex, btn_styles.hover_style);
   });
 });
+
+/**
+ * カーソルを指定時間の間ウェイトにする
+ *
+ * @param {number}} waitingTime 待ち時間（ミリ秒）
+ *
+ * @author: equeko99
+ */
+function setWaitCursor(waitingTime) {
+  setTimeout(function () {
+    //iframeコンテンツ切替ボタン内 liのカーソルスタイルを待ち時間にする
+    setCursorStyle(cursor_styles.wait_style);
+  }, waitingTime);
+}
 
 /**
  * HTML（DOM）の読み込みが終わったタイミングで実行
